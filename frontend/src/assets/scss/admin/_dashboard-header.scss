@@ -1,0 +1,172 @@
+@use "../forwarding" as f;
+@use "sass:color";
+
+.dashboard-holder{
+    .dashboard-header{
+        margin-bottom: 2rem;
+        h1{
+            margin-bottom: 0;
+            font-size: 1.2rem;
+        }
+
+        .navbar-toggler-custom{
+    
+            line-height: 1rem;
+            padding: 0.5rem 0.6rem;
+    
+            &:focus{
+                box-shadow: none;
+            }
+            
+        }
+    
+        .navbar-toggler-icon-custom{
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+    
+        .offcanvas-custom{
+            background-color: f.$dashboard-nav-bg;
+        }
+    }
+
+    .dashboard-navbar{
+        svg{
+            vertical-align: middle;
+        }
+        .logo-holder{
+            text-align: center;
+            margin-bottom: 3rem;
+            img{
+                display: inline-block;
+                max-width: 100%;
+                max-height: 5rem;
+                object-fit: contain;
+            }
+        }
+    
+        .nav-item-acc{
+            border-top: 2px solid f.$custom-black;
+            border-bottom: 2px solid f.$custom-black;
+            margin: 0 0 1.5rem;
+        }
+    
+        .collapse-btn{
+            position: relative;
+            padding: 0.7rem 0;
+            width: 100%;
+            border: none;
+    
+            img{
+                display: inline-block;
+            }
+    
+            img,svg:first-child{
+                width: 1.9rem;
+                height: 1.9rem;
+            }
+    
+        }
+    
+        .nav-item-single{
+            padding: 0.7rem 0;
+            svg{
+                width: 1.9rem;
+                height: 1.9rem;
+            }
+        }
+    
+    
+        svg:last-child{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    
+        .name-span{
+            display: inline-block;
+            padding: 0 1.5rem 0 0.5rem;
+            text-transform: capitalize;
+        }
+    
+        .collapse-ul{
+            li{
+                padding: 0 1rem 0 2.4rem;
+            }
+    
+            svg{
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+            span{
+                padding-left: 0.5rem;
+            }
+        }
+
+        .collapse-ul button,a{
+            &:hover{
+                color: f.$dashboard-nav-color-hover;
+            }
+            &:active{
+                color: color.change(f.$custom-black,$alpha:0.5);
+            }
+        }
+    
+        .logout-ul{
+            button{
+                border: none;
+                background-color: transparent;
+                padding: 0 0 0.7rem;
+            }
+    
+        }
+        a{
+            display: inline-block;
+        }
+        a:not(.logo-link){
+
+            padding: 0.3rem 0;
+    
+            &.active{
+                color: f.$dashboard-nav-color-active;
+            }
+        }
+    
+        li:first-child a{
+            padding-top: 0;
+        }
+    
+        li:last-child a{
+            padding-bottom: 0;
+        }
+    }
+    
+    @media all and (min-width:576px){
+        .dashboard-header{
+            h1{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+
+    
+    @media all and (min-width:992px){
+
+        .dashboard-header{
+            h1{
+                text-align: center;
+                padding: 1rem 0;
+                font-size: 1.8rem;
+            }
+        }
+        .dashboard-navbar-lg{
+            background-color: f.$dashboard-nav-bg;
+            height: 100vh;
+            padding: 1rem 1.5rem 0;
+            overflow-y: auto;
+        }
+    }
+}
+

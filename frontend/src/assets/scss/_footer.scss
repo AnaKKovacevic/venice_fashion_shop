@@ -1,0 +1,132 @@
+@use "forwarding" as f;
+@use "sass:color";
+
+footer{
+    margin-top: 2rem;
+    color: f.$footer-color;
+    background-color: f.$footer-bg;
+
+    .footer-links-sections-holder{       
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-cards-holder{
+        padding-bottom: 0.5rem;
+    }
+
+    .footer-cards{
+        border-top: 1px solid f.$custom-yellow;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    h3,h4,h5{
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    .footer-links-holder{
+        font-size: 0.9rem;
+    }
+
+    .footer-links-content-holder{
+        padding: 0.8rem 0.75rem 0;
+    }
+
+    .log-out-btn{
+        color: f.$custom-black-btn-color;
+        background-color: f.$custom-black-btn-bg;
+        border: none;
+        padding: 0;
+    }
+
+    a{
+        color: f.$custom-black-btn-color;
+        display: block;
+
+        &:hover{
+            color: f.$custom-black-btn-color;
+        }
+
+        &:not(:last-child){
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    button.btn-outline-light{
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    svg{
+        vertical-align: middle;
+    }
+
+    address{
+        display: block;
+        margin-bottom: 0;
+        white-space: nowrap;
+
+        p,a{
+            display: inline-block;
+            margin-left: 0.8rem;
+        }
+
+        svg{
+            width: 1.2rem;
+            height: 1.2rem;
+            vertical-align: top;
+        }
+
+    }
+
+    .card{
+       padding: 0.2rem 0.3rem;
+       background-color: f.$footer-bg;
+    }
+
+    img{
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        object-fit: contain;
+    }
+
+    small{
+        font-size: 0.7rem;
+    }
+
+    @media all and (min-width:300px){
+        address{
+            svg{
+                vertical-align: middle;
+            }
+        }
+    }
+
+    @media all and (min-width:768px){
+
+        .footer-links-holder{
+            font-size: 0.8rem;
+        }
+
+        .footer-links-content-holder{
+            padding-left: 0;
+        }
+
+        address{
+            p,a{
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+
+        .footer-links-holder{
+            font-size: 0.9rem;
+        }
+    }
+}

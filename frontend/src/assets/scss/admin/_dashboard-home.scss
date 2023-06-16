@@ -1,0 +1,116 @@
+@use "../forwarding" as f;
+
+.dashboard-count-section{
+    margin: 0 auto;
+    max-width: 15rem;
+    .dashboard-count-article-col{
+        margin-bottom: 1.5rem;
+
+    }
+    .article-content-holder{
+        border: 1px solid f.$custom-border-color;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .icon-holder{
+        width: 4rem;
+        height: 4rem;
+        text-align: center;
+        padding: 1rem;
+
+        svg{
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &.icon-holder-products{
+            background-color: f.$dashboard-count-icon-yellow;
+        }
+
+        &.icon-holder-categories{
+            background-color: f.$dashboard-count-icon-orange;
+        }
+
+        &.icon-holder-brands{
+            background-color: f.$dashboard-count-icon-green;
+        }
+
+        &.icon-holder-posts{
+            background-color: f.$dashboard-count-icon-azure;
+        }
+        &.icon-holder-users{
+            background-color: f.$dashboard-count-icon-purple;
+        }
+        &.icon-holder-subscribers{
+            background-color: f.$dashboard-count-icon-red;
+        }
+        &.icon-holder-orders{
+            background-color: f.$dashboard-count-icon-blue;
+        }
+    }
+
+    .text-holder{
+        text-align: center;
+        
+        .count-span{
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+
+        .count-name-span{
+            font-size: 0.9rem;
+        }
+    }
+
+    @media all and (min-width:400px){
+        max-width: 20rem;
+        .icon-holder{
+            width: 5rem;
+            height: 5rem;
+            svg{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        .text-holder{
+            
+            .count-span{
+                font-size: 1.5rem;
+            }
+    
+            .count-name-span{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media all and (min-width:576px){
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    @media all and (min-width:1400px){
+
+        .icon-holder{
+            width: 6rem;
+            height: 6rem;
+            svg{
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        .text-holder{
+            
+            .count-span{
+                font-size: 1.8rem;
+            }
+    
+            .count-name-span{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

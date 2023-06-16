@@ -1,0 +1,481 @@
+@use "forwarding" as f;
+@use "sass:color";
+
+.product-details-section, .quick-view-section{
+
+    margin-top: 2rem;
+
+
+    .main-img-zoom-holder{
+        border: 1px solid f.$custom-border-color;
+        border-radius: 0 2rem 0 2rem;
+        position: relative;
+        cursor: crosshair;
+        overflow: hidden;
+    }
+
+    .main-img-holder{
+        position: relative;
+        top: 0;
+        left: 0;
+
+       
+        img{
+            display: block;
+            width: 100%;
+            height: 10rem;
+            object-fit: contain;
+        }
+    }
+
+    .zoom-btn{
+        position: absolute;
+        bottom: 0.8rem;
+        right: 0.8rem;
+        background-color: color.change(f.$custom-white-btn-bg,$alpha:0.6);
+        border: 1px solid f.$custom-border-color;
+        cursor: pointer;
+        padding: 0.3rem 0.6rem;
+        z-index: 16;
+        svg{
+            vertical-align: middle;
+        }
+    }
+
+    .zoom-helper-holder{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+    }
+
+    .additional-imgs-section{
+        margin-top: 1rem;
+
+        .product-imgs-parent{
+            position: relative;
+            overflow: hidden;
+        }
+
+        ul{
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: left 1s;
+        }
+
+        .product-imgs-left-arrow-holder, .product-imgs-right-arrow-holder{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background-color: f.$custom-white-btn-bg;
+            z-index: 6;
+            cursor: pointer;
+    
+            svg{
+                vertical-align: middle;
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+        }
+
+        .img-list-item{
+            display: inline-block;
+            top: 0;
+            transform: translateX(-50%);
+
+            &:first-child{
+                position: relative;
+                left: 50%;
+            }
+
+            &:not(:first-child){
+                position: absolute;
+            }
+        }
+
+        img{
+            display: inline-block;
+            width: 4rem;
+            height: 4rem;
+            object-fit: contain;
+            cursor: pointer;
+            border: 1px solid f.$custom-border-color;
+        }
+
+        .img-holder{
+            position: relative;
+        }
+
+
+        .disabled-img{
+
+            &::after{
+                content: " ";
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255,255,255,0.5);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 5;
+                cursor: pointer;
+            }
+        }
+    
+        .disabled-arrow{
+            color: f.$custom-white-btn-color-disabled;
+        }
+    
+        .product-imgs-left-arrow-holder{
+            left: 0;
+        }
+    
+        .product-imgs-right-arrow-holder{
+            right: 0;
+        }
+    }
+
+
+    .desc-review-section{
+        margin-top: 2rem;
+        
+        .desc-review-holder{
+            border: 1px solid f.$custom-border-color;
+            padding: 1rem 0.8rem;
+        }
+        h3{
+            font-size: 1.1rem;
+            margin: 0;
+            
+        }
+        .btn-info-content-holder:first-child{
+            margin-bottom: 1rem;
+        }
+        .custom-btn-info{
+            border: 1px solid f.$custom-border-color;
+            background-color: f.$custom-white-btn-bg;
+            text-align: center;
+            padding: 0.5rem 0.8rem;
+            border-radius: 0.5rem;
+            width: 100%;
+
+            &.active-info-btn{
+                border-color:f.$custom-border-color;
+            }
+            
+        }
+
+        p{
+            margin: 0;
+        }
+
+
+        .content-holder{
+            p:first-of-type{
+                margin-top: 1rem;
+            }
+        }
+
+        .stock-info-holder{
+            
+            p{
+                vertical-align: top;
+            }
+            p:first-child{
+                margin-bottom: 0.8rem;
+                font-weight: 500;
+            }
+            .stock-number-indicator, p:last-child{
+                display: inline-block;
+            }
+        }
+
+        .stock-number-indicator{
+            width: 8rem;
+            height: 1.5rem;
+            border: 1px solid f.$custom-border-color;
+            border-radius: 1rem;
+            margin-right: 0.5rem;
+
+            &.stock-number-indicator-empty{
+                background-color: f.$custom-white;
+            }
+
+            &.stock-number-indicator-full{
+                background-color: f.$custom-green;
+            }
+        }
+
+        .stock-number-indicator-yellow{
+            width: 50%;
+            height: 100%;
+            border-radius: 1rem;
+            background-color: f.$custom-yellow;
+        }
+
+        .review-holder{
+            margin-top: 1rem;
+            
+        }
+
+        .review-holder, .modal-review-holder{
+            p:first-of-type{
+                margin: 0 0 0.4rem;
+                
+            }
+
+            h5{
+                text-transform: capitalize;
+                margin: 0.5rem 0;
+            }
+            span{
+
+                font-size: 0.9rem;
+                color: f.$less-important-text-color;
+
+                &:first-of-type{
+                    display: inline-block;
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        .modal-review-holder:not(:first-child){
+            margin-top: 1rem;
+        } 
+
+        .show-reviews-btn, .write-review-btn{
+            text-transform: capitalize;
+            text-align: center;
+            margin-top: 1rem;
+            border-radius: 1rem;
+            width: 100%;
+        }
+
+        .show-reviews-btn{
+            margin-right: 1rem;
+            border: 1px solid f.$custom-border-color;
+            background-color: f.$custom-white-btn-bg;
+            &:hover{
+                border-color: f.$custom-outline-btn-border-hover;
+            }
+
+            &:active{
+                border-color: f.$custom-outline-btn-border-active;
+            }
+        }
+
+        .write-review-btn{
+            background-color: f.$custom-yellow-btn-bg;
+            border: 1px solid f.$custom-yellow-btn-border;
+
+            &:hover{
+                background-color: f.$custom-yellow-btn-bg-hover;
+            }
+
+            &:active{
+                background-color: f.$custom-yellow-btn-bg-active;
+            }
+        }
+        .review-info-span{
+            display: inline-block;
+            font-size: 0.9rem;
+            color: f.$less-important-text-color;
+            margin-top: 1rem;
+        }
+    }
+
+    @media all and (min-width:300px){
+        .main-img-holder{
+
+            img{
+                height: 15rem;
+            }
+        }
+
+        .additional-imgs-section{
+
+            img{
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+    }
+
+    @media all and (min-width:400px){
+
+        .main-img-holder{
+
+            img{
+                height: 20rem;
+            }
+        }
+
+        .desc-review-section{
+            .custom-btn-info{
+    
+                &.active-info-btn{
+                    border-color:f.$custom-white-btn-border-active;
+                }
+            }
+            .content-holder{
+                p:first-of-type:not(.modal-form-par){
+                    margin-top: 2rem;
+                }
+            }
+
+            .more-info-details-holder, .reviews-holder{
+                display: block;
+
+                
+            }
+            .more-info-content-hidden{
+                    display: none;
+            }
+            h3{
+                display: inline-block;
+
+                &:first-child{
+                    margin-right: 1rem;
+                }
+            }
+
+            .stock-info-holder{
+                margin-top: 2rem;
+                p:first-child:not(.modal-form-par){
+                    display: inline-block;
+                    margin: 0 1.5rem 0 0;
+                }
+            }
+
+            .review-holder{
+                margin-top: 2rem;
+
+                
+            }
+
+            .review-holder, .modal-review-holder{
+                p:first-of-type:not(.modal-form-par){
+                    margin: 0 0 0.8rem;
+                }
+                h5{
+                    margin: 0.8rem 0 1rem;
+                }
+            }
+
+            .show-reviews-btn, .write-review-btn{
+                width: auto;
+                padding: 0.1rem 0.5rem;
+            }
+        }
+
+    }
+
+    @media all and (min-width:576px){
+
+        .main-img-holder{
+
+            img{
+                height: 25rem;
+            }
+        }
+        .additional-imgs-section{
+            .img-list-item{
+                 transform: none;
+                 width: 33.33%;
+                 padding-right: 0.5rem;
+                 padding-left: 0.5rem;
+                 
+ 
+                 &:first-child{
+                     left: 0;
+                 }
+             }
+         }
+
+    }
+
+    @media all and (min-width:768px){
+
+        .main-img-holder{
+
+            img{
+                height: 20rem;
+            }
+        }
+
+        .additional-imgs-section{
+
+            img{
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+        .desc-review-section{
+        margin-top: 3rem;
+
+    }
+    }
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+
+        .main-img-holder{
+
+            img{
+                height: 28rem;
+            }
+        }
+
+        .additional-imgs-section{
+
+            img{
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+    }
+
+    @media all and (min-width:1200px){
+
+        .main-img-holder{
+
+            img{
+                height: 32rem;
+            }
+        }
+
+        .additional-imgs-section{
+            .img-list-item{
+                
+                 width: 25%;
+                 
+             }
+         }
+
+    .desc-review-section{
+        margin-top: 4rem;
+
+    }
+    }
+
+    @media all and (min-width:1400px){
+
+
+        .additional-imgs-section{
+            .img-list-item{
+                
+                 width: 20%;
+                 
+             }
+         }
+    }
+}

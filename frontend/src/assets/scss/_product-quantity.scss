@@ -1,0 +1,33 @@
+@use "forwarding" as f;
+
+.quantity-action{
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 1.5rem;
+    border: 1px solid f.$custom-border-color;
+
+    &>*{
+        display: inline-block;
+        user-select: none;
+    }
+
+    .quantity-minus, .quantity-plus{
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .quantity-minus{
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+
+    .quantity-plus{
+        border-radius: 0 1.5rem 1.5rem 0;
+    }
+
+    .quantity{
+        width: 2rem;
+    }
+    
+}

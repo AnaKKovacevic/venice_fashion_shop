@@ -1,0 +1,50 @@
+@use "forwarding" as f;
+
+.activation-acc-msg-section{
+
+    margin-top: 2rem;
+
+    .msg-holder{
+        border: 1px solid f.$custom-border-color;
+        padding: 0.5rem 0.4rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+    h2{
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        margin: 0;
+        text-align: center;
+    }
+    p{
+        margin: 1.5rem 0 1rem;
+    }
+    .spinner-border, .spinner-info{
+        display: inline-block;
+    }
+
+    .spinner-border{
+        width: 1.5rem;
+        height: 1.5rem;
+        min-width: 1.5rem;
+    }
+
+    @media all and (min-width:576px){
+        .msg-holder{
+            padding: 1rem 2rem 2rem;
+        }
+        h2{
+            font-size: 1.2rem;
+        }
+    }
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+        p{
+            margin:2.5rem 0 1.5rem; 
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+}

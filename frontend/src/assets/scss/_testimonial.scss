@@ -1,0 +1,97 @@
+@use "forwarding" as f;
+@use "sass:color";
+
+.testimonial-section{
+    margin-top: 2rem;
+    
+    .testimonial-article{
+        height: 100%;
+    }
+    h3{
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+    }
+
+    .testimonial-holder{
+        
+        color: f.$custom-black-btn-color;
+        background-color: color.change(f.$custom-black-btn-bg,$alpha: 0.85);
+        padding: 0.5rem;
+        height: 100%;
+
+    }
+
+    .message{
+        position: relative;
+    }
+
+    blockquote{
+        font-size: 0.8rem;
+        font-weight: 300;
+        border: 1px solid f.$custom-yellow;
+        padding: 0.8rem 0.5rem 4rem;
+        
+    }
+
+    .testimonial-img-holder{
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%,-50%);
+    }
+
+    img{
+        display: inline-block;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+
+    p:not(.error-get-data-par){
+        color: f.$custom-yellow;
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    @media all and (min-width:400px){
+        blockquote{
+            font-size: 0.9rem;
+        }
+    }
+
+    @media all and (min-width:576px){
+        blockquote{
+            min-height:230px;
+        }
+
+        
+    }
+
+    @media all and (min-width:768px){
+        blockquote{
+            min-height:251px;
+        }
+    }
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+
+        blockquote{
+            min-height:187px;
+        }
+
+        h3{
+            margin-bottom: 4rem;
+        }
+    }
+
+    @media all and (min-width:1200px){
+        blockquote{
+            font-size: 1rem;
+            min-height:198px;
+        }
+    }
+}

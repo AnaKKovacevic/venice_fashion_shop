@@ -1,0 +1,181 @@
+@use "../forwarding" as f;
+
+
+.dashboard-holder{
+    .dashboard-content{
+
+        padding-bottom: 4rem;
+
+        .dashboard-heading-search-holder{
+            margin-bottom: 3rem;
+        }
+        h2{
+            margin: 0 0 2rem;
+            padding: 0;
+        }
+
+        .search-btn{
+            svg{
+                vertical-align: middle;
+            }
+        }
+
+        .search-btn,.edit-btn, .view-order-btn{
+            background-color: f.$custom-yellow-btn-bg;
+            border: 1px solid f.$custom-yellow-btn-border;
+            &:hover{
+                background-color: f.$custom-yellow-btn-bg-hover;
+            }
+            &:active{
+                background-color: f.$custom-yellow-btn-bg-active;
+            }
+        }
+
+        .delete-btn{
+            background-color: f.$custom-red-btn-bg;
+            border: 1px solid f.$custom-red-btn-border;
+            color: f.$custom-red-btn-color;
+
+            &:hover{
+                background-color: f.$custom-red-btn-bg-hover;
+                color: f.$custom-red-btn-color-hover;
+            }
+            &:active{
+                background-color: f.$custom-red-btn-bg-active;
+                color: f.$custom-red-btn-color;
+            }
+        }
+
+        .view-order-btn{
+            min-width: 115px;
+        }
+
+        .pagination-holder{
+            margin-top: 4rem;
+        }
+
+
+
+        &.update-product-section,
+        &.update-cat-section,
+        &.update-brand-section{
+            .dashboard-card{
+                height: 100%;
+            }
+    
+            .img-holder{
+                text-align: center;
+            }
+    
+            .article-content-holder{
+                border: 1px solid f.$custom-border-color;
+                background-color: f.$custom-white;
+                height: 100%;
+                padding: 0.8rem 1rem;
+                max-width: 260px;
+                margin: 0 auto;
+    
+                
+    
+                img{
+                    display: inline-block;
+                    max-width: 100%;
+                    height: 10rem;
+                    object-fit: contain;
+                }
+    
+                h3{
+                    font-size: 1.2rem;
+                    margin: 0;
+                    padding: 1rem 0;
+                    text-transform: capitalize;
+                }
+                .update-btns-holder{
+                    margin-top: 1rem;
+        
+                    .edit-btn, .delete-btn{
+                        flex-basis: 40%;
+                    }
+            
+                }
+            }
+        }
+
+        &.update-blog-section,
+        &.user-section,
+        &.dashboard-orders-section{
+            table{
+                min-width: 820px;
+                th,td{
+                    background-color: transparent;
+                }
+
+            }
+
+            th:not(:last-child){
+                padding-right: 3rem;
+            }
+        }
+
+        &.user-section,
+        &.dashboard-orders-section{
+            td:not(:last-child){
+                padding-right: 3rem;
+            }
+        }
+
+        &.update-blog-section{
+            table{
+                .edit-btn, .delete-btn{
+                    width: 5rem;
+                }
+            }
+            td:not(.edit-btn-td, .delete-btn-td){
+                padding-right: 3rem;
+            }
+
+            .edit-btn-td, .delete-btn-td{
+                width: 10%;
+            }
+        }
+
+        &.user-section{
+            .switch-holder{
+                display: inline-block;
+            }
+
+            .td-status{
+                min-width:6rem;
+            }
+        }
+
+
+        @media all and (min-width:576px){
+
+
+            h2{
+                margin: 0;
+                width:30%;
+                text-align: left;
+            }
+            .search-group{
+                width: 50%;
+            }
+            &.update-product-section,
+            &.update-cat-section,
+            &.update-brand-section{
+                .article-content-holder{
+                    max-width: 100%;
+                }
+            }
+
+        }
+
+        @media all and (min-width:992px){
+
+            padding: 0 1.5rem 4rem;
+
+        }
+
+    }
+}

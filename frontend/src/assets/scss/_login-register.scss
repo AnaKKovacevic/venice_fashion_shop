@@ -1,0 +1,84 @@
+@use "forwarding" as f;
+
+.auth-section{
+    margin-top: 2rem;
+    .auth-form-holder{
+        border: 1px solid f.$custom-border-color;
+        padding: 0.5rem 0.4rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+    h2{
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        margin: 0;
+        text-align: center;
+    }
+
+    p{
+        margin: 1rem 0;
+        font-size: 0.9rem;
+
+        a{
+            display: inline-block;
+            border-bottom: 2px solid f.$custom-yellow;
+        }
+    }
+
+    .check-mail-par{
+        font-size: 1.05rem;
+        margin-top: 1.8rem;
+        margin-bottom: 0;
+    }
+
+    .input-login-holder{
+        margin: 1rem 0;
+    }
+    .input-auth-holder{
+        margin: 1rem 0;
+
+        &.input-login-holder:nth-child(2),
+        &.input-register-holder:nth-child(4){
+            margin-bottom: 2rem;
+        }
+    }
+
+    span:not(.input-msg-span){
+        cursor: pointer;
+    }
+
+    button{
+        background-color: f.$custom-black-btn-bg;
+        color: f.$custom-black-btn-color;
+        border-radius: 0.5rem;
+        border: 1px solid f.$custom-black-btn-border;
+        width: 100%;
+        padding: 0.2rem;
+
+        &:hover{
+            background-color: f.$custom-black-btn-bg-hover;
+            color: f.$custom-black-btn-color-hover;
+        }
+        &:active{
+            background-color: f.$custom-black-btn-bg-active;
+            color: f.$custom-black-btn-color-active;    
+        }
+    }
+
+    @media all and (min-width:576px){
+        .auth-form-holder{
+            padding: 1rem 2rem 2rem;
+        }
+        h2{
+            font-size: 1.2rem;
+        }
+    }
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+}

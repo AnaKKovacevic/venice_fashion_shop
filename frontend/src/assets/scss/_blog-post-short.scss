@@ -1,0 +1,177 @@
+@use "forwarding" as f;
+
+
+
+.col-blog-post{
+
+    .post-holder{
+        padding-bottom: 1rem;
+    }
+
+    .post-info-text-holder{
+        padding-top: 0.5rem;
+
+
+    }
+
+    img{
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    h2,h4{
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    p,a{
+        color: f.$blog-color;
+    }
+
+    .post-info-holder{
+        p{
+            margin: 0.7rem 0 0 0;
+            font-size: 0.8rem;
+        }
+    }
+
+    .post-text{
+        p{
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+    }
+
+    a{
+            text-transform: uppercase;
+            display: inline-block;
+            border: 1px solid f.$custom-border-color;
+            padding: 0.2rem 0.3rem;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+            transition: scale 0.5s;
+
+            &:hover{
+                color: f.$blog-color;
+                scale: 1.2;
+            }
+
+            &:active{
+                border-color: f.$custom-outline-btn-border-active;
+            }
+        }
+
+        .yellow-border, .black-border{
+            display: none;
+        }
+
+    @media all and (min-width:400px){
+    
+            .post-info-text-holder{
+                padding-top: 0.8rem;
+            }
+
+            .post-text{
+                p{
+                    margin-bottom: 1.5rem;
+                }
+            }
+    }
+
+    @media all and (min-width:768px){
+        .post-img-holder{
+            width: 40%;
+        }
+        .post-info-text-holder{
+            width: 60%;
+            padding-top: 0;
+            
+        }
+
+        &:nth-child(odd) .post-info-text-holder{
+            padding-left: 1.5rem;
+        }
+
+        &:nth-child(even) .post-info-text-holder{
+            padding-right: 1.5rem;
+        }
+
+        h2,h4{
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .post-info-holder{
+            p{
+                display: inline-block;
+                margin-right: 0.7rem;
+            }
+        }
+
+        .post-text{
+            p{
+                margin-bottom: 0.1rem;
+                font-size: 0.8rem;
+            }
+        }
+        a{
+            font-size: 0.9rem;
+        }
+    }
+
+    @media all and (min-width:992px){
+
+        h2,h4{
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .post-info-holder{
+            p{
+                font-size: 0.85rem;
+                margin-top: 0;
+            }
+        }
+
+        .post-text{
+            p{
+                margin-bottom: 3rem;
+                margin-top: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+
+        a{
+            font-size: 1.2rem;
+            padding: 0.2rem 0.5rem;
+        }
+    }
+
+    @media all and (min-width:1200px){
+
+        h2,h4{
+            font-size: 1.4rem;
+        }
+
+        .post-info-holder{
+            p{
+                font-size: 0.9rem;
+            }
+        }
+
+        .post-text{
+            p{
+                font-size: 1.1rem;
+                margin-top: 2rem;
+                margin-bottom: 4rem;
+            }
+        }
+
+        a{
+            padding: 0.3rem 0.8rem;
+        }
+    }
+}

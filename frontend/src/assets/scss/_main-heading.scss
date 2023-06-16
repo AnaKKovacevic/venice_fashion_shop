@@ -1,0 +1,29 @@
+@use "forwarding" as f;
+
+.main-heading{
+
+    margin-top: 2rem;
+    h1{
+        border-bottom: 2px solid f.$custom-yellow;
+        font-size: 1.3rem;
+        padding-bottom: 0.2rem;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+
+    @media all and (min-width:576px){
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+    
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+
+        h1{
+            font-size: 1.8rem;
+        }
+    }
+}

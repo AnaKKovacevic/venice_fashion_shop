@@ -1,0 +1,179 @@
+@use "assets/scss/variables" as v;
+@use "assets/scss/nav.scss";
+@use "assets/scss/modal.scss";
+@use "assets/scss/slider.scss";
+@use "assets/scss/promoted-cats.scss";
+@use "assets/scss/rank.scss";
+@use "assets/scss/custom-title.scss";
+@use "assets/scss/products-slider.scss";
+@use "assets/scss/product.scss";
+@use "assets/scss/customers-info.scss";
+@use "assets/scss/testimonial.scss";
+@use "assets/scss/blog-list.scss";
+@use "assets/scss/blog-post-short.scss";
+@use "assets/scss/blog-post-full.scss";
+@use "assets/scss/header-route.scss";
+@use "assets/scss/main-heading.scss";
+@use "assets/scss/main-heading-img.scss";
+@use "assets/scss/product-details.scss";
+@use "assets/scss/product-details-info.scss";
+@use "assets/scss/pagination.scss";
+@use "assets/scss/cart-action-yellow.scss";
+@use "assets/scss/cart-offcanvas.scss";
+@use "assets/scss/checkout.scss";
+@use "assets/scss/payment.scss";
+@use "assets/scss/stock-circle.scss";
+@use "assets/scss/product-list.scss";
+@use "assets/scss/search.scss";
+@use "assets/scss/login-register.scss";
+@use "assets/scss/activation-account.scss";
+@use "assets/scss/comparison.scss";
+@use "assets/scss/table-cart_wishlist_order.scss";
+@use "assets/scss/order-list.scss";
+@use "assets/scss/brand-slider.scss";
+@use "assets/scss/newsletter.scss";
+@use "assets/scss/footer.scss";
+@use "assets/scss/button-top.scss";
+@use "assets/scss/product-quantity.scss";
+@use "assets/scss/loader.scss";
+@use "assets/scss/contact.scss";
+@use "assets/scss/admin/dashboard-header";
+@use "assets/scss/admin/dashboard-home";
+@use "assets/scss/admin/dashboard-add-edit-form";
+@use "assets/scss/admin/dashboard-edit-delete";
+@use "assets/scss/admin/dashboard-order";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+
+body{
+  background-color: v.$custom-body-background;
+  color: v.$custom-font-color;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: v.$custom-black;
+}
+::-webkit-scrollbar-track{
+  background-color: v.$custom-gray-light;
+}
+
+
+img,svg{
+  vertical-align: bottom;
+}
+
+a{
+  text-decoration: none;
+  color: v.$custom-font-color;
+
+  &:hover{
+    color: v.$custom-font-color;
+  }
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.comparison-section,.view-cart-section, 
+.wishlist-section, .product-search-list-section,
+.checkout-section, .order-list-section,.customer-order-section{
+
+  .no-products-par{
+      margin: 0;
+      border: 1px solid v.$custom-border-color;
+      padding: 0.5rem;
+  }
+}
+
+.customer-order-section{
+  .no-products-par{
+    margin-top: 2rem;
+  }
+}
+
+.error-get-data-par{
+  margin: 0;
+  border: 1px solid v.$custom-red;
+  padding: 0.5rem;
+  color: v.$custom-red;
+}
+
+.input-msg-span{
+  font-size: 0.9rem;
+  color: v.$custom-red;
+}
+
+.remove-btn-holder{
+  button{
+      border: none;
+      background-color: transparent;
+      svg{
+          vertical-align: middle;
+  
+      }
+}
+}
+
+.dashboard-holder{
+  background-color: v.$custom-gray-light;
+  height: 100vh;
+  width: 100vw;
+  .header-col{
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .col-main{
+    margin: 2rem auto 0;
+    max-width: 1140px;
+  }
+
+  h2{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+}
+
+@media all and (min-width:576px){
+  .dashboard-holder{
+      h2{
+          font-size: 1.4rem;
+          padding-left: 1rem;
+      }
+  }
+}
+
+@media all and (min-width:992px){
+  .dashboard-holder{
+    h2{
+        font-size: 1.7rem;
+        text-align: left;
+    }
+  }
+
+  .customer-order-section{
+    .no-products-par{
+      margin-top: 4rem;
+    }
+  }
+}
+
+
+@media all and (min-width:1400px){
+  .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,33 @@
+@use "forwarding" as f;
+@use "sass:color";
+
+.top-btn-holder{
+    display: none;
+    position: fixed;
+    bottom: 3rem;
+    right: 2rem;
+    z-index: 10;
+
+    .top-btn{
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        background-color: f.$custom-white-btn-bg;
+        border: 1px solid f.$custom-black;
+        color: f.$custom-white-btn-color;
+        border-radius: 50%;
+
+        &:hover{
+            background-color: f.$custom-yellow;
+        }
+
+        &:active{
+            background-color: color.change(f.$custom-yellow,$alpha:0.5);
+        }
+    }
+    svg{
+        vertical-align: middle;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

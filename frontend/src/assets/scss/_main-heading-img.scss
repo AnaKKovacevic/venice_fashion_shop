@@ -1,0 +1,86 @@
+@use "forwarding" as f;
+@use "sass:color";
+
+.header-main-heading-section{
+    .img-heading-holder{
+        position: relative;
+    }
+
+    img{
+        display: inline-block;
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        object-position: 81% 10%;
+    }
+
+    h1{
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: color.change(f.$custom-yellow,$alpha:0.8);
+        margin: 0;
+        padding: 0.3rem;
+    }
+
+    @media all and (min-width:400px){
+        
+        h1{
+            font-size: 2rem;
+            text-align: left;
+            padding-left: 1rem;
+        }
+        
+    }
+
+    @media all and (min-width:576px){
+        
+        h1{
+            font-size: 2.3rem; 
+            background-color: transparent;
+            bottom: 10%;
+            left: 4%;
+            display: inline-block;
+            width: auto;
+            max-width: 30%;
+        }
+        
+    }
+
+    @media all and (min-width:992px){
+        
+        img{
+            height: 21rem;
+        }
+
+        h1{
+            font-size: 3rem; 
+        }
+        
+    }
+
+    @media all and (min-width:1200px){
+       
+        img{
+            object-position: 81% 30%;
+        }
+        
+    }
+
+    @media all and (min-width:1400px){
+       
+        img{
+            height: 23rem;
+        }
+
+        h1{
+            max-width: none;
+        }
+        
+    }
+}

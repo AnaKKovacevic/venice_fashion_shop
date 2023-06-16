@@ -1,0 +1,158 @@
+@use "forwarding" as f;
+
+.brand-slider-section{
+
+    margin-top: 2rem;
+
+    .brand-logo-articles-parent{
+        position: relative;
+        overflow: hidden;
+    }
+
+    .brand-logo-articles-holder{
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: left 1s;
+        
+    }
+
+    .brand-slider-left-arrow-holder, .brand-slider-right-arrow-holder{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-color: f.$custom-white-btn-bg;
+        z-index: 2;
+        cursor: pointer;
+
+        svg{
+            vertical-align: middle;
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+    }
+
+    .disabled-arrow{
+        color: f.$custom-white-btn-color-disabled;
+    }
+
+    .brand-slider-left-arrow-holder{
+        left: 0;
+    }
+
+    .brand-slider-right-arrow-holder{
+        right: 0;
+    }
+
+
+    .brand-logo-article{
+        top: 0;
+        transform: translateX(-50%);
+
+        a{
+            display: inline-block;
+        }
+
+        img{
+            display: inline-block;
+            width: 6rem;
+            height: 6rem;
+            object-fit: contain;
+        }
+
+        &:first-child{
+            position: relative;
+            left: 50%;
+        }
+
+        @for $i from 2 through 11 {
+
+            &:nth-child(#{$i}){
+                position: absolute;
+                left: ($i - 1)*100% + 50%;
+                
+            }            
+        }
+    }
+
+    @media all and (min-width:400px){
+        .brand-logo-article{
+            img{
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+    }
+
+    @media all and (min-width:576px){
+        .brand-logo-article{
+            transform: none;
+            width: 50%;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+
+            &:first-child{
+                left: 0;               
+            }
+            
+            @for $i from 2 through 11 {
+
+                &:nth-child(#{$i}){
+                    left: ($i - 1)*50%;
+                    
+                }            
+            }
+        }
+    }
+
+    @media all and (min-width:768px){
+        .brand-logo-article{
+            
+            width: 33.33%;
+
+            @for $i from 2 through 11 {
+
+                &:nth-child(#{$i}){
+                    left: ($i - 1)*33.33%;
+                    
+                }            
+            }
+        }
+    }
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+
+        .brand-logo-article{
+            
+            width: 25%;
+
+            @for $i from 2 through 11 {
+
+                &:nth-child(#{$i}){
+                    left: ($i - 1)*25%;
+                    
+                }            
+            }
+        }
+    }
+
+    @media all and (min-width:1200px){
+
+        .brand-logo-article{
+            
+            width: 20%;
+
+            @for $i from 2 through 11 {
+
+                &:nth-child(#{$i}){
+                    left: ($i - 1)*20%;
+                    
+                }            
+            }
+        }
+    }
+}

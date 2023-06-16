@@ -1,0 +1,64 @@
+@use "../forwarding" as f;
+
+.dashboard-one-order-section{
+    padding-bottom: 4rem;
+
+    .scope-row-table{
+        min-width: 550px;
+        tbody{
+            th{
+                width: 30%;
+            }
+        }
+    }
+    .table-section.one-order-section{
+        margin-top: 0;
+    }
+
+    h3{
+        font-size: 1.1rem;
+        margin: 0 0 2rem;
+        text-align: center;
+        border-top: 2px solid f.$custom-yellow;
+        border-bottom: 2px solid f.$custom-yellow;
+        padding: 1rem 0;
+        text-transform: capitalize;
+    }
+
+    @media all and (min-width:576px){
+
+        .dashboard-one-order-holder{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        h3{
+            font-size: 1.4rem;
+            padding-left: 1rem;
+        }
+
+    }
+
+    @media all and (min-width:768px){
+
+        .scope-row-table{
+            min-width: 0;
+            tbody{
+                th{
+                    width: auto;
+                }
+            }
+        }
+
+        .dashboard-one-order-holder{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+
+        h3{
+            margin-bottom: 3rem;
+        }
+
+    }
+
+}

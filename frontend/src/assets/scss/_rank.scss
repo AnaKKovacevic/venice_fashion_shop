@@ -1,0 +1,27 @@
+@use "forwarding" as f;
+
+.stars-holder{
+
+    color: f.$ranking-stars-color;
+
+    .star-holder{
+        padding: 0 0.1rem;
+        display: inline-block;
+    }
+
+    &.stars-hover-holder{
+        .star-holder{
+            cursor: pointer;
+            margin-right: 0.4rem;
+        }
+
+        .full-star-holder{
+            display: none;
+        }
+
+        svg{
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@use "forwarding" as f;
+@use "sass:color";
+
+.customers-info-section{
+    margin-top: 2rem;
+    .customers-info-article{
+        
+        text-align: center;
+        text-transform: capitalize;
+        padding: 0.6rem 0.6rem 1.5rem;
+        height: 100%;
+    }
+    img{
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+        
+    }
+
+    .col-12:nth-of-type(3), .col-12:nth-of-type(4){
+        img{
+            padding: 0.5rem;
+        }
+    }
+
+    .col-12:nth-of-type(2n) .customers-info-article{
+        background-color: color.change(f.$customers-info-bg,$alpha: 0.4);
+    }
+
+    .col-12:nth-of-type(2n + 1) .customers-info-article{
+        background-color: f.$customers-info-bg;
+    }
+
+    h4{
+        font-size: 1rem;
+        margin: 0.5rem 0 0;
+        min-height: 2.5rem;
+    }
+    p{
+        font-size: 0.9rem;
+        margin: 0.5rem 0 0;
+    }
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+    }
+
+}

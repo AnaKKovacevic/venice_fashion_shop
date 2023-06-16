@@ -1,0 +1,108 @@
+@use "forwarding" as f;
+
+.offcanvasAddedToCart{
+    h2{
+        text-transform: capitalize;
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+
+    .offcanvas-body{
+        border-top: 2px solid f.$custom-yellow;
+    }
+
+    h3{
+        margin: 0.5rem 0 1rem;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    img{
+        display: inline-block;
+        max-width: 100%;
+        height: 15rem;
+        object-fit: contain;
+    }
+
+    .added-product-price-quantity-holder,.cart-info-holder{
+        padding: 0 0.5rem;
+        margin-top: 1rem;
+    }
+    .added-product-price-holder,.cart-quantity-holder{
+        margin-bottom: 0.5rem;
+    }
+    .title-span{
+        font-weight: 500;
+        display: inline-block;
+        padding-right: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .added-product-price-num-holder{
+        .no-disc-span{
+            font-size: 0.9rem;
+            text-decoration: line-through;
+            color: f.$less-important-text-color;
+        }
+    }
+
+    .cart-info-holder{
+        border-top: 2px solid f.$custom-yellow;
+        span:nth-of-type(2){
+            font-weight: 500;
+        }
+    }
+    h4{
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
+
+    .shop-checkout-btns-holder{
+        margin-top: 2rem;
+
+        button{
+            margin-bottom: 1rem;
+        }
+        button,a{
+            border: 1px solid f.$custom-yellow-btn-border;
+            background-color: f.$custom-yellow-btn-bg;
+            padding: 0.3rem 0.1rem;
+            text-transform: capitalize;
+            display: inline-block;
+            width: 100%;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+
+            &:hover{
+                background-color: f.$custom-yellow-btn-bg-hover;
+            }
+            &:active{
+                background-color: f.$custom-yellow-btn-bg-active;
+            }
+        }
+    }
+
+    @media all and (min-width:300px){
+        h3{
+            margin-bottom: 1.5rem;
+
+        }
+
+        .title-span{
+            font-size: 1rem;
+        }
+
+        .cart-info-holder{
+            span:nth-of-type(2){
+                font-size: 1.1rem;
+            }
+        }
+        .shop-checkout-btns-holder{
+            button,a{
+                width: 80%;
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@use "forwarding" as f;
+
+.contact-section{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    .row-title{
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-info-holder{
+        background-color: f.$custom-yellow;
+        padding: 0.5rem;
+    }
+    h2,h3,h4,p{
+        margin: 0;
+    }
+    h2{
+        text-align: center;
+        font-size: 1.3rem;
+        text-transform: capitalize;
+    }
+    h3{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    h4{
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .col-contact-info{
+        margin-bottom: 1.5rem;
+    }
+    .phone-holder{
+        margin-bottom: 0.5rem;
+    }
+    p,a{
+        font-size: 0.9rem;
+    }
+    address{
+        margin: 1rem 0;
+        p{
+            display: inline-block;
+        }
+    }
+
+    svg{
+        vertical-align: middle;
+        margin-right: 0.5rem;
+    }
+
+    .input-contact-holder{
+        margin: 1rem 0;
+    }
+
+    button{
+        background-color: f.$custom-yellow-btn-bg;
+        border: 1px solid f.$custom-yellow-btn-border;
+        border-radius: 1rem;
+        width: 100%;
+        padding: 0.3rem;
+
+        &:hover{
+            background-color: f.$custom-yellow-btn-bg-hover;
+        }
+        &:active{
+            background-color: f.$custom-yellow-btn-bg-active;
+        }
+    }
+
+    .input-msg-span{
+        font-size: 0.9rem;
+        color: f.$custom-red;
+    }
+
+    @media all and (min-width:576px){
+        h2{
+            font-size: 1.5rem;
+        }
+        .col-contact-info{
+            margin-bottom: 2rem;
+        }
+        .contact-info-holder{
+            padding: 1rem 0.5rem;
+            text-align: center;
+            p,a{
+                font-size: 1rem;
+            }
+        }
+
+        address{
+            margin: 1.5rem 0 2rem;
+        }
+
+        h4{
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @media all and (min-width:768px){
+        margin-bottom: 4rem;
+
+        .row-title{
+            margin-bottom: 3rem;
+        }
+        .col-contact-info{
+            margin-bottom: 0;
+        }
+        .contact-info-holder{
+            height: 100%;
+        }
+
+    }
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+        .row-title{
+            margin-bottom: 4rem;
+        }
+        h2{
+            font-size: 1.7rem;
+        }
+
+        .contact-info-holder{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        address{
+            margin-top: 2.5rem;
+        }
+    }
+}

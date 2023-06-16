@@ -1,0 +1,184 @@
+@use "sass:color";
+
+//Colors
+
+$custom-white: #fff;
+$custom-gray: #d9d9d9;
+$custom-gray-light: #f7f7f7;
+$custom-gray-dark: #808080de;
+$custom-black: #000;
+$custom-yellow: #fed219;
+$custom-yellow-light: #ffeda3;
+$custom-green: #00cc00;
+$custom-red: #cc3300;
+
+$facebook-blue: #3c5a99;
+$twitter-blue: #38a1f3;
+$instagram-red: #dd4b39;
+
+$dashboard-count-icon-yellow: $custom-yellow;
+$dashboard-count-icon-orange: #ffad33;
+$dashboard-count-icon-green: #5cd65c;
+$dashboard-count-icon-purple: #dd99ff;
+$dashboard-count-icon-blue: #4da6ff;
+$dashboard-count-icon-red: #ff4d4d;
+$dashboard-count-icon-azure: #00e6e6;
+
+
+
+$custom-body-background: $custom-white;
+$custom-font-color: $custom-black;
+$custom-border-color:$custom-gray;
+
+//Styles for Header component
+
+$custom-header-links-color: $custom-black;
+
+
+$custom-nav-dropdown-items-bg:$custom-white;
+$custom-nav-dropdown-items-bg-hover:$custom-white;
+$custom-nav-dropdown-items-bg-active:$custom-white;
+$custom-nav-dropdown-items-color-active:$custom-black;
+
+
+// Styles for black btns/links
+
+$custom-black-btn-bg:$custom-black;
+$custom-black-btn-border:$custom-black;
+
+$custom-black-btn-color:$custom-white;
+$custom-black-btn-bg-hover:$custom-white;
+
+$custom-black-btn-color-hover:$custom-black;
+$custom-black-btn-bg-active:color.change($custom-black,$alpha: 0.8);
+$custom-black-btn-color-active:$custom-white;
+
+//Styles for white btns/links
+
+$custom-white-btn-bg:$custom-white;
+$custom-white-btn-border:$custom-white;
+$custom-white-btn-color:$custom-black;
+
+$custom-white-btn-bg-hover:$custom-black;
+$custom-white-btn-border-hover:$custom-black;
+$custom-white-btn-color-hover:$custom-white;
+
+$custom-white-btn-border-active:$custom-black;
+$custom-white-btn-bg-disabled:$custom-gray;
+$custom-white-btn-color-disabled:$custom-gray-dark;
+
+//Styles for yellow btn
+
+$custom-yellow-btn-bg: $custom-yellow;
+$custom-yellow-btn-border: $custom-yellow;
+
+$custom-yellow-btn-bg-hover: $custom-white;
+$custom-yellow-btn-bg-active: $custom-yellow-light;
+
+//Styles for red btn
+
+$custom-red-btn-bg: $custom-red;
+$custom-red-btn-border: $custom-red;
+$custom-red-btn-color: $custom-white;
+
+$custom-red-btn-bg-hover: $custom-white;
+$custom-red-btn-color-hover: $custom-black;
+
+$custom-red-btn-bg-active: color.change($custom-red,$alpha:0.7);
+//Styles for outline btn
+
+$custom-outline-btn-bg: $custom-white;
+$custom-outline-btn-border: $custom-gray;
+
+$custom-outline-btn-border-hover: $custom-black;
+
+$custom-outline-btn-border-active: color.change($custom-black,$alpha:0.5);
+
+//Styles for slider
+
+$custom-slider-arrows-indicators: $custom-white;
+
+//Styles for promoted categories cards
+
+$custom-promoted-cats-background: $custom-gray-light;
+
+//Bootstrap classes overriding
+
+@import "../../../node_modules/bootstrap/scss/functions";
+
+$navbar-light-color: $custom-black;
+$navbar-light-hover-color: rgba($custom-black, 0.7);
+$navbar-toggler-font-size: 2rem;
+
+$input-focus-border-color: $custom-yellow;
+$input-focus-box-shadow: 0 0 5px $custom-yellow;
+$form-check-input-focus-border: $custom-yellow;
+$form-check-input-focus-box-shadow: 0 0 5px $custom-yellow;
+$form-check-input-checked-bg-color: $custom-yellow;
+$btn-close-focus-shadow: 0 0 5px $custom-yellow;
+$form-select-focus-border-color: $custom-yellow;
+$form-select-focus-box-shadow: 0 0 0 0.1rem $custom-yellow;
+
+$pagination-color: $custom-black;
+$pagination-hover-color: $custom-yellow;
+$pagination-active-color: $custom-black;
+$pagination-active-bg: $custom-yellow;
+$pagination-active-border-color:$custom-yellow;
+
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/root";
+@import "../../../node_modules/bootstrap/scss/nav";
+@import "../../../node_modules/bootstrap/scss/navbar";
+@import "../../../node_modules/bootstrap/scss/forms/form-control";
+@import "../../../node_modules/bootstrap/scss/forms/form-check";
+@import "../../../node_modules/bootstrap/scss/forms/form-select";
+@import "../../../node_modules/bootstrap/scss/close";
+@import "../../../node_modules/bootstrap/scss/pagination";
+
+//CUSTOM VARIABLES
+
+//Stars
+
+$ranking-stars-color: $custom-yellow;
+
+//Top Products
+
+$top-products-background: $custom-gray-light;
+$top-products-border-hover: $custom-black;
+
+//Customers info
+
+$customers-info-bg: $custom-yellow;
+
+//Blog
+
+$blog-color: $custom-gray-dark;
+
+//Social networks - newsletter component
+
+$social-network-section-bg: $custom-gray-light;
+$subscription-bg: $custom-yellow;
+
+//Modal
+
+$modal-svg-color: $custom-white;
+
+//Less important info
+
+$less-important-text-color: $custom-gray-dark;
+
+//Footer
+
+$footer-bg: $custom-black;
+$footer-color: $custom-white;
+
+//Admin Dashboard
+
+$dashboard-nav-bg: $custom-yellow;
+$dashboard-nav-color: $custom-black;
+$dashboard-nav-color-hover: $custom-gray-dark;
+$dashboard-nav-color-active: $custom-gray-dark;
+

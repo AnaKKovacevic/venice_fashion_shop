@@ -1,0 +1,210 @@
+@use "forwarding" as f;
+
+.product-list-section{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    .filters-sort-section, .sort-lg-section{
+        border-bottom: 2px solid f.$custom-yellow;
+        padding-bottom: 1rem;
+    }
+
+    .funnel-btn, .modal-sort-btn{
+        background-color: f.$custom-white-btn-bg;
+        cursor: pointer;
+        border: 1px solid f.$custom-border-color;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .funnel-btn svg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    svg{
+        vertical-align: middle;
+    }
+
+    .all-filters-holder{
+
+        h3{
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem;
+        }
+        :first-child h3{
+            margin: 0 0 1rem;
+        }
+        :not(:first-child) h3{
+            margin: 1.5rem 0 1rem;
+        }
+        label{
+            text-transform: capitalize;
+        }
+        .form-check:not(:last-child){
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .filter-action-btn{
+        
+        display: block;
+        border-radius: 1.3rem;
+        padding: 0.5rem 1rem;
+        margin: 0 auto;
+
+        &.filter-apply-btn{
+            background-color: f.$custom-yellow-btn-bg;
+            border: 1px solid f.$custom-yellow-btn-border;
+            margin-bottom: 1rem;
+
+            &:hover{
+                background-color: f.$custom-yellow-btn-bg-hover;
+            }
+
+            &:active{
+                background-color: f.$custom-yellow-btn-bg-active;
+            }
+        }
+
+        &.filter-reset-btn{
+            background-color: f.$custom-white-btn-bg;
+            border: 1px solid f.$custom-border-color;
+            &:hover{
+                border-color: f.$custom-outline-btn-border-hover;
+            }
+
+            &:active{
+                border-color: f.$custom-outline-btn-border-active;
+            }
+        }
+    }
+
+    .sort-select-holder{
+        text-align: right;
+        label{
+            width: 100%;
+        }
+        select{
+            display: inline-block;
+            width: 30%;
+            margin-left: 1rem;
+        }
+    }
+
+    .limit-select-holder{
+
+        text-align: center;
+        label{
+
+            width: 9rem;
+        }
+
+        select{
+            display: block;
+            width: 50%;
+            margin: 0.5rem auto 0;
+        }
+        
+    }
+
+    .filters-products-col{
+        margin-top: 2rem;
+    }
+
+    .filtered-product-article{
+        max-width: 338px;
+    }
+
+    .pagination-col{
+        margin-top: 4rem;
+    }
+
+    @media all and (min-width:300px){
+
+        .filter-action-btn{
+        
+            display: inline-block;
+    
+            &.filter-apply-btn{
+                margin-right: 0.6rem;
+            }
+    
+        }
+
+        svg{
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .limit-select-holder{
+
+            label{
+                width: 14rem;
+            }
+    
+            select{
+                display: inline-block;
+                width: 35%;
+                margin: 0 0 0 1rem;
+            }
+            
+        }
+    }
+
+    @media all and (min-width:400px){
+        .filter-action-btn{
+
+    
+            &.filter-apply-btn{
+                margin-right: 2rem;
+            }
+    
+        }
+    }
+
+    @media all and (min-width:576px){
+        .filtered-product-article{
+            max-width: none;
+        }
+    }
+
+    @media all and (min-width:768px){
+        .limit-select-holder{
+            text-align: right;
+            label{
+                width: 13rem;
+            }
+    
+            select{
+                width: 33%;
+            }
+            
+        }
+    }
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+
+        .filters-lg-section{
+            .filter-reset-btn{
+                margin-top: 2rem;
+            }
+        }
+
+        .filter-collapse-btn{
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            font-weight: 500;
+            width: 100%;
+
+
+            svg{
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    }
+
+    
+}

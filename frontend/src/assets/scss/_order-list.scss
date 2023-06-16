@@ -1,0 +1,42 @@
+@use "forwarding" as f;
+
+.order-list-section{
+    margin-top: 2rem;
+
+    table{
+        min-width: 936px;
+
+        th{
+            font-size: 1.1rem;
+        }
+        .title-td{
+            text-transform: capitalize;
+        }
+    }
+
+    a{
+        text-transform: capitalize;
+        display: inline-block;
+        border: 1px solid f.$custom-yellow-btn-border;
+        background-color: f.$custom-yellow-btn-bg;
+        border-radius: 1.1rem;
+        padding: 0.3rem 0.7rem;
+        &:hover{
+            background-color: f.$custom-yellow-btn-bg-hover;
+        }
+
+        &:active{
+            background-color: f.$custom-yellow-btn-bg-active;
+        }
+    }
+
+    @media all and (min-width:992px){
+        margin-top: 4rem;
+
+        table{
+            th{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

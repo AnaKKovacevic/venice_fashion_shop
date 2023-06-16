@@ -1,0 +1,136 @@
+@use "../forwarding" as f;
+@use "sass:color";
+
+.dashboard-form-holder{
+    padding-bottom: 4rem;
+
+    .submit-btn{
+        border: 1px solid f.$custom-yellow-btn-border;
+        background-color: f.$custom-yellow-btn-bg;
+        padding: 0.3rem 1.5rem;
+        margin-top: 2rem;
+
+        &:hover{
+            background-color: f.$custom-yellow-btn-bg-hover;
+        }
+
+        &:active{
+            background-color: f.$custom-yellow-btn-bg-active;
+            border: 1px solid f.$custom-yellow-btn-border;
+        }
+    }
+
+    .dashboard-add-edit-input-holder{
+        margin-bottom: 1rem;
+    }
+
+    &.dashboard-product-form-holder{
+    
+        select{
+            margin-top: 0.5rem;
+            text-transform: capitalize;
+        }
+    
+        option{
+            text-transform: capitalize;
+        }
+    
+        .add-edit-imgs-collapse-btn{
+            border: 1px solid f.$custom-yellow-btn-border;
+            display: block;
+            margin-bottom: 1rem;
+
+            &:hover{
+                background-color: f.$custom-yellow;
+            }
+    
+            &:active{
+                background-color: color.change(f.$custom-yellow,$alpha:0.5);
+            }
+        }
+    }
+
+    &.dashboard-cat-form-holder{
+        .dashboard-add-edit-input-holder  .radio-holder{
+            margin-bottom: 1rem;
+        }
+        p{
+            margin-bottom: 0.5rem;
+        }
+        .form-check:first-child{
+            margin-right: 1rem;
+        }
+    }
+
+
+
+
+    @media all and (min-width:576px){
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        &.dashboard-product-form-holder{
+            .add-edit-product-select-holder{
+                &:first-child{
+                    width: 50%;
+                }
+                &:nth-child(2){
+                    width: 45%;
+                }
+            }
+    
+            .input-group-holder{
+                label,input{
+                    width: 100%;
+                }
+                .add-edit-product-input-holder{
+                    width: 45%;
+                }
+            }
+        }
+
+        &.dashboard-cat-form-holder{
+            p{
+                margin: 0 1.5rem 0 0;
+            }
+        }
+
+
+    }
+
+    @media all and (min-width:768px){
+
+        &.dashboard-product-form-holder{
+            .add-edit-product-select-holder{
+                &:first-child{
+                    width: 35%;
+                }
+                &:nth-child(2){
+                    width: 30%;
+                }
+                
+            }
+            .input-group-holder{
+                .add-edit-product-input-holder:nth-child(3){
+                    width: 12%;
+                }
+                .add-edit-product-input-holder:nth-child(4){
+                    width: 12%;
+                }
+            }
+        }
+
+    }
+
+    @media all and (min-width:992px){
+
+        &.dashboard-cat-form-holder{
+            .add-edit-cat-input-holder, .radio-holder{
+                margin-bottom: 1.5rem;
+            }
+        }
+
+
+
+    }
+}

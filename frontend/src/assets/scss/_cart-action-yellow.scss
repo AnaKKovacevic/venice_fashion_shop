@@ -1,0 +1,41 @@
+@use "forwarding" as f;
+
+.product-info-section,.comparison-section,.wishlist-section{
+    .cart-action{
+        background-color: f.$custom-yellow-btn-bg;
+        text-align: center;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 1.2rem;
+        text-transform: capitalize;
+        cursor: pointer;
+        border: 1px solid f.$custom-yellow-btn-border;
+
+        &:hover{
+            background-color: f.$custom-yellow-btn-bg-hover;
+        }
+        &:active{
+            background-color: f.$custom-yellow-btn-bg-active;
+        }
+    }
+
+    
+}
+
+.product-info-section,.comparison-section{
+    .cart-action{
+        margin-top: 1rem;
+        margin-right: 1.5rem;
+    }   
+}
+
+
+@media all and (min-width:1200px){
+    .product-info-section{
+    .cart-action{
+        margin-top: 1.5rem;
+    }
+}
+
+
+}

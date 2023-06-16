@@ -1,0 +1,69 @@
+@use "forwarding" as f;
+@use "sass:color";
+
+.header-route-section{
+
+    .img-route-holder{
+        position: relative;
+    }
+    img{
+        display: inline-block;
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        object-position: 50.5% 15%;
+    }
+
+    .route-holder{
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: color.change(f.$custom-yellow,$alpha:0.8);
+        padding: 0.2rem 0.5rem;
+        p{
+            margin-bottom: 0;
+        }
+    }
+
+    @media all and (min-width:300px){
+        
+       br{
+        display: none;
+       }
+        
+    }
+
+    @media all and (min-width:768px){
+        
+       .route-holder{
+        font-size: 1.1rem;
+       }
+         
+     }
+
+    @media all and (min-width:992px){
+        .route-holder{
+            background-color: transparent;
+            font-size: 1.2rem;
+            bottom: 10%;
+            left: 4%;
+           }
+        img{
+            height: 21rem;
+        }
+        
+    }
+
+    @media all and (min-width:1400px){
+        .route-holder{
+            font-size: 1.3rem;
+           }
+        img{
+            height: 23rem;
+            object-position: 50.5% 20%;
+        }
+        
+    }
+}
